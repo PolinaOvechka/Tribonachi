@@ -183,7 +183,7 @@ namespace Tribonachi
                 g.FillEllipse(fibBrush, x - 3, yFib - 3, 6, 6); // Фибоначчи
                 g.FillEllipse(tribBrush, x - 3, yTrib - 3, 6, 6); // Трибоначчи
 
-                g.DrawString((i + 1).ToString(), new Font("Arial", 9, FontStyle.Bold), brush, x - 8, height - padding + 8);
+                g.DrawString((i + 0).ToString(), new Font("Arial", 9, FontStyle.Bold), brush, x - 8, height - padding + 8);
             }
 
             // Рисуем линии

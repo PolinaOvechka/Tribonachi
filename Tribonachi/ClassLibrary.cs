@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
     public static class Sequences
     {
-
         // Метод для Трибоначчи
         public static List<string> GenerateTribonacciStrings(int n)
         {
@@ -23,10 +19,12 @@ namespace ClassLibrary
             List<long> trib = new List<long>();
             for (int i = 0; i < n; i++)
             {
-                if (i == 0 || i == 1)
+                if (i == 0)
+                    trib.Add(0);
+                else if (i == 1)
                     trib.Add(1);
                 else if (i == 2)
-                    trib.Add(2);
+                    trib.Add(1);
                 else
                 {
                     long next = trib[i - 1] + trib[i - 2] + trib[i - 3];
@@ -40,18 +38,21 @@ namespace ClassLibrary
             }
 
             // ЗАГОЛОВОК
-            result.Add("№: Значение (Отношение)");
-            result.Add("------------------------");
+            result.Add("Член: Значение (Отношение)");
+            result.Add("----------------------------");
 
-            // Строки с данными
+            // Строки с данными (индексация с 0, как в математике)
             for (int i = 0; i < trib.Count; i++)
             {
-                if (i == 0)
-                    result.Add((i + 1) + ": " + trib[i] + " (---)");
+                // Отношение не определено для:
+                // - первого элемента (нет предыдущего)
+                // - если предыдущий элемент = 0 (деление на ноль)
+                if (i == 0 || trib[i - 1] == 0)
+                    result.Add(i + ": " + trib[i] + " (---)");
                 else
                 {
                     double ratio = (double)trib[i] / trib[i - 1];
-                    result.Add((i + 1) + ": " + trib[i] + " (" + ratio.ToString("F4") + ")");
+                    result.Add(i + ": " + trib[i] + " (" + ratio.ToString("F4") + ")");
                 }
             }
 
@@ -72,8 +73,10 @@ namespace ClassLibrary
             List<long> fib = new List<long>();
             for (int i = 0; i < n; i++)
             {
-                if (i == 0 || i == 1)
-                    fib.Add(1);
+                if (i == 0)
+                    fib.Add(0);  // F₀ = 0 ← ДОБАВЛЕНО!
+                else if (i == 1)
+                    fib.Add(1);  // F₁ = 1
                 else
                 {
                     long next = fib[i - 1] + fib[i - 2];
@@ -87,18 +90,19 @@ namespace ClassLibrary
             }
 
             // ЗАГОЛОВОК
-            result.Add("№: Значение (Отношение)");
-            result.Add("------------------------");
+            result.Add("Член: Значение (Отношение)");
+            result.Add("----------------------------");
 
-            // Строки с данными
+            // Строки с данными (с проверкой деления на ноль)
             for (int i = 0; i < fib.Count; i++)
             {
-                if (i == 0)
-                    result.Add((i + 1) + ": " + fib[i] + " (---)");
+                // Отношение не определено для первого элемента или при делении на 0
+                if (i == 0 || fib[i - 1] == 0)
+                    result.Add(i + ": " + fib[i] + " (---)");
                 else
                 {
                     double ratio = (double)fib[i] / fib[i - 1];
-                    result.Add((i + 1) + ": " + fib[i] + " (" + ratio.ToString("F4") + ")");
+                    result.Add(i + ": " + fib[i] + " (" + ratio.ToString("F4") + ")");
                 }
             }
 
@@ -116,8 +120,10 @@ namespace ClassLibrary
 
             for (int i = 0; i < n; i++)
             {
-                if (i == 0 || i == 1)
-                    result.Add(1);
+                if (i == 0)
+                    result.Add(0);  // F₀ = 0 ← ДОБАВЛЕНО!
+                else if (i == 1)
+                    result.Add(1);  // F₁ = 1
                 else
                 {
                     long next = result[i - 1] + result[i - 2];
@@ -140,10 +146,12 @@ namespace ClassLibrary
 
             for (int i = 0; i < n; i++)
             {
-                if (i == 0 || i == 1)
+                if (i == 0)
+                    result.Add(0); 
+                else if (i == 1)
                     result.Add(1);
                 else if (i == 2)
-                    result.Add(2);
+                    result.Add(1); 
                 else
                 {
                     long next = result[i - 1] + result[i - 2] + result[i - 3];
