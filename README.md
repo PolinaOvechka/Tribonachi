@@ -12,10 +12,9 @@ Windows Forms приложение на C# для работы с числовы
 2. Нажмите `Ctrl + F5` (`Ctrl + Fn + F5`) для запуска без отладки
 
 ### Пример использования
-<img width="777" height="612" alt="image" src="https://github.com/user-attachments/assets/8cf8ed39-7ffe-45c5-9de7-f29533bd4247" />
-<img width="777" height="607" alt="image" src="https://github.com/user-attachments/assets/0eeeb09c-99e1-46f5-8ba9-ddd66ef0dde1" />
-<img width="774" height="613" alt="image" src="https://github.com/user-attachments/assets/1a6db8f8-1934-442e-8e6d-39b9215d9532" />
-
+<img width="780" height="605" alt="image" src="https://github.com/user-attachments/assets/a4c13c1f-1f6d-4889-b0ae-fb0fcf7b489f" />
+<img width="778" height="606" alt="image" src="https://github.com/user-attachments/assets/bce40c3e-0963-4c2b-8dbc-b5c77df95c51" />
+<img width="778" height="611" alt="image" src="https://github.com/user-attachments/assets/3d335259-1ce7-4afa-8838-b32eea91251e" />
 
 ## Особенности программы
 1. Полная валидация ввода
