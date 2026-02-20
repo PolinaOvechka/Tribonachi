@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="ClassLibrary1/ClassLibrary1.csproj" Id="9568ada0-2416-4552-8a13-2061a3dcafdd" />
   <Project Path="Tribonachi/Tribonachi.csproj" Id="f83ee15a-03e4-4360-a523-6b7430945006" />
+  <Project Path="UnitTestProject1/UnitTestProject1.csproj" Id="6266e886-6aed-478b-853c-d645f3421ad4" />
 </Solution>

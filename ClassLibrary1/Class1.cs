@@ -121,9 +121,9 @@ namespace ClassLibrary
             for (int i = 0; i < n; i++)
             {
                 if (i == 0)
-                    result.Add(0);  // F₀ = 0 ← ДОБАВЛЕНО!
+                    result.Add(0); 
                 else if (i == 1)
-                    result.Add(1);  // F₁ = 1
+                    result.Add(1);
                 else
                 {
                     long next = result[i - 1] + result[i - 2];
@@ -147,11 +147,11 @@ namespace ClassLibrary
             for (int i = 0; i < n; i++)
             {
                 if (i == 0)
-                    result.Add(0); 
+                    result.Add(0);
                 else if (i == 1)
                     result.Add(1);
                 else if (i == 2)
-                    result.Add(1); 
+                    result.Add(1);
                 else
                 {
                     long next = result[i - 1] + result[i - 2] + result[i - 3];
